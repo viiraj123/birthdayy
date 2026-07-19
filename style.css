@@ -1,78 +1,433 @@
-.notes{
+/* ------------------------------
+   Google Font Styles
+--------------------------------*/
 
-margin-top:60px;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+    background:#f6efe4;
+    overflow-x:hidden;
+    min-height:100vh;
+
+    background-image:
+    radial-gradient(#ffffff80 2px, transparent 2px);
+
+    background-size:45px 45px;
+}
+
+
+/* ------------------------------
+      Main Section
+--------------------------------*/
+
+.hero{
+
+    width:100%;
+    min-height:100vh;
+
+    display:flex;
+    flex-direction:column;
+
+    align-items:center;
+    justify-content:center;
+
+    position:relative;
+
+    padding:40px 20px;
 
 }
 
-.box{
 
-width:60%;
+/* ------------------------------
+      Decorative Images
+--------------------------------*/
 
-margin:20px auto;
+.flower{
 
-padding:18px;
+    position:absolute;
 
-background:#fff4df;
+    top:25px;
+    left:35px;
 
-border-radius:15px;
+    width:160px;
 
-font-size:20px;
+    border-radius:20px;
 
-box-shadow:0 5px 12px rgba(0,0,0,.1);
+    transform:rotate(-15deg);
 
-}
-
-.letter{
-
-margin-top:60px;
-
-padding:30px;
-
-width:70%;
-
-margin-left:auto;
-
-margin-right:auto;
-
-background:#ffe6dc;
-
-border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
 
 }
 
-.heading{
+.disco{
 
-margin-top:50px;
+    position:absolute;
 
-margin-bottom:20px;
+    top:30px;
+    right:40px;
 
-}
+    width:90px;
 
-.confetti{
-
-position:fixed;
-
-width:12px;
-
-height:12px;
-
-top:-20px;
-
-animation:fall 3s linear forwards;
+    animation:spin 8s linear infinite;
 
 }
 
-@keyframes fall{
+@keyframes spin{
 
-0%{
+    from{
 
-transform:translateY(0) rotate(0deg);
+        transform:rotate(0deg);
+
+    }
+
+    to{
+
+        transform:rotate(360deg);
+
+    }
 
 }
 
-100%{
 
-transform:translateY(110vh) rotate(720deg);
+/* ------------------------------
+      Stars
+--------------------------------*/
+
+.star{
+
+    position:absolute;
+
+    font-size:28px;
+
+    animation:floatStar 3s ease-in-out infinite;
+
+}
+
+.star1{
+
+    top:180px;
+    right:250px;
+
+}
+
+.star2{
+
+    top:320px;
+    left:160px;
+
+}
+
+.star3{
+
+    bottom:180px;
+    right:180px;
+
+}
+
+@keyframes floatStar{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-10px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+/* ------------------------------
+      Photo Section
+--------------------------------*/
+
+.photo-section{
+
+    position:relative;
+
+    margin-top:20px;
+
+}
+
+.main-photo{
+
+    width:340px;
+    height:430px;
+
+    object-fit:cover;
+
+    border-radius:25px;
+
+    border:10px solid #fff;
+
+    box-shadow:0 18px 40px rgba(0,0,0,.18);
+
+    transition:.4s;
+
+}
+
+.main-photo:hover{
+
+    transform:scale(1.03);
+
+}
+
+
+/* Party Hat */
+
+.party-hat{
+
+    position:absolute;
+
+    top:-20px;
+    left:50%;
+
+    transform:translateX(-50%) rotate(-12deg);
+
+    font-size:60px;
+
+}
+
+
+/* ------------------------------
+      Birthday Heading
+--------------------------------*/
+
+.title{
+
+    margin-top:35px;
+
+    text-align:center;
+
+    line-height:1.3;
+
+}
+
+.title span{
+
+    display:inline-block;
+
+    margin:6px;
+
+    padding:10px 14px;
+
+    border-radius:10px;
+
+    background:white;
+
+    box-shadow:0 6px 15px rgba(0,0,0,.15);
+
+    transform:rotate(calc(-5deg + 10deg * var(--r)));
+
+    font-size:34px;
+
+    font-weight:bold;
+
+}
+
+/* Different Colors */
+
+.title span:nth-child(1){background:#ffb3b3;}
+.title span:nth-child(2){background:#ffd27d;}
+.title span:nth-child(3){background:#c9f7b8;}
+.title span:nth-child(4){background:#bde7ff;}
+.title span:nth-child(5){background:#f9c4ff;}
+
+.title span:nth-child(7){background:#ffb3b3;}
+.title span:nth-child(8){background:#ffd27d;}
+.title span:nth-child(9){background:#c9f7b8;}
+.title span:nth-child(10){background:#bde7ff;}
+.title span:nth-child(11){background:#f9c4ff;}
+.title span:nth-child(12){background:#ffe7a3;}
+.title span:nth-child(13){background:#cfffd7;}
+.title span:nth-child(14){background:#bde7ff;}
+
+.name{
+
+    background:#d9c3a3 !important;
+
+    color:#5f3d2d;
+
+    padding:12px 24px !important;
+
+    font-size:40px !important;
+
+}
+
+
+/* ------------------------------
+      Subtitle
+--------------------------------*/
+
+.subtitle{
+
+    margin-top:25px;
+
+    font-size:20px;
+
+    color:#6a5445;
+
+    text-align:center;
+
+    font-family:'Patrick Hand',cursive;
+
+}
+
+
+/* ------------------------------
+      Button
+--------------------------------*/
+
+#openGift{
+
+    margin-top:40px;
+
+    padding:16px 40px;
+
+    border:none;
+
+    border-radius:50px;
+
+    background:#8b5e3c;
+
+    color:white;
+
+    font-size:18px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+
+}
+
+#openGift:hover{
+
+    background:#6e4529;
+
+    transform:translateY(-5px) scale(1.04);
+
+}
+
+
+/* ------------------------------
+      Floating Hearts
+--------------------------------*/
+
+.hearts::before,
+.hearts::after{
+
+    content:"💖";
+
+    position:fixed;
+
+    font-size:24px;
+
+    animation:heartFloat 8s linear infinite;
+
+    opacity:.7;
+
+}
+
+.hearts::after{
+
+    left:85%;
+
+    animation-delay:4s;
+
+}
+
+.hearts::before{
+
+    left:8%;
+
+}
+
+@keyframes heartFloat{
+
+    from{
+
+        bottom:-60px;
+
+        transform:translateX(0);
+
+    }
+
+    to{
+
+        bottom:110%;
+
+        transform:translateX(60px);
+
+    }
+
+}
+
+
+/* ------------------------------
+      Responsive
+--------------------------------*/
+
+@media(max-width:768px){
+
+.flower{
+
+    width:100px;
+
+}
+
+.disco{
+
+    width:60px;
+
+}
+
+.main-photo{
+
+    width:260px;
+    height:340px;
+
+}
+
+.title span{
+
+    font-size:24px;
+    padding:8px 10px;
+
+}
+
+.name{
+
+    font-size:28px !important;
+
+}
+
+.subtitle{
+
+    font-size:18px;
+
+}
+
+#openGift{
+
+    width:90%;
 
 }
 
