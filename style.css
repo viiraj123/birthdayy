@@ -432,3 +432,76 @@ body{
 }
 
 }
+/* ==========================
+   Confetti
+========================== */
+
+.confetti{
+
+    position:fixed;
+
+    top:-20px;
+
+    width:12px;
+
+    height:18px;
+
+    border-radius:4px;
+
+    animation:confettiFall linear forwards;
+
+    z-index:999;
+
+}
+
+@keyframes confettiFall{
+
+    to{
+
+        transform:translateY(120vh) rotate(720deg);
+
+        opacity:0;
+
+    }
+
+}
+
+
+
+/* ==========================
+   Floating Hearts
+========================== */
+
+.floating-heart{
+
+    position:fixed;
+
+    bottom:-50px;
+
+    z-index:999;
+
+    pointer-events:none;
+
+    animation:heartRise linear forwards;
+
+}
+
+@keyframes heartRise{
+
+    from{
+
+        transform:translateY(0) scale(.8);
+
+        opacity:1;
+
+    }
+
+    to{
+
+        transform:translateY(-110vh) scale(1.4);
+
+        opacity:0;
+
+    }
+
+}
